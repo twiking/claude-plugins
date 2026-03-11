@@ -2,5 +2,7 @@
   "name": "claude-status",
   "version": "0.1.0",
   "description": "Tracks whether Claude is working in a session and writes status to ~/.claude-status/<dirname>.json",
-  "author": "twiking"
+  "author": {
+    "name": "twiking"
+  }
 }
