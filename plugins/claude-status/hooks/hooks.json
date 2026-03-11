@@ -1,0 +1,45 @@
+{
+  "hooks": [
+    {
+      "event": "SessionStart",
+      "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/set-status.sh Inactive",
+      "timeout": 5
+    },
+    {
+      "event": "UserPromptSubmit",
+      "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/set-status.sh Active",
+      "timeout": 5,
+      "async": true
+    },
+    {
+      "event": "PreToolUse",
+      "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/set-status.sh Active",
+      "timeout": 5,
+      "async": true
+    },
+    {
+      "event": "Stop",
+      "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/set-status.sh Inactive",
+      "timeout": 5
+    },
+    {
+      "event": "Notification",
+      "matcher": "idle_prompt",
+      "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/set-status.sh Inactive",
+      "timeout": 5,
+      "async": true
+    },
+    {
+      "event": "Notification",
+      "matcher": "permission_prompt",
+      "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/set-status.sh PermissionRequest",
+      "timeout": 5,
+      "async": true
+    },
+    {
+      "event": "SessionEnd",
+      "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/set-status.sh Inactive",
+      "timeout": 5
+    }
+  ]
+}

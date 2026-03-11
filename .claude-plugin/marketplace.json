@@ -1,0 +1,11 @@
+{
+  "name": "twiking-claude-plugins",
+  "owner": {
+    "name": "twiking"
+  },
+  "plugins": [
+    {
+      "path": "./plugins/claude-status"
+    }
+  ]
+}
