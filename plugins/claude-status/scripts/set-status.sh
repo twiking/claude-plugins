@@ -13,7 +13,7 @@ if [ -z "$CWD" ]; then
 fi
 
 DIRNAME=$(basename "$CWD")
-STATUS_DIR="$HOME/.claude-status"
+STATUS_DIR="$CWD/.claude/claude-status"
 mkdir -p "$STATUS_DIR"
 
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
