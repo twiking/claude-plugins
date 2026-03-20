@@ -12,8 +12,8 @@ if [ -z "$CWD" ]; then
   exit 0
 fi
 
-DIRNAME=$(basename "$CWD")
-STATUS_DIR="$CWD/.claude/claude-status"
+DIRNAME="data.json" #$(basename "$CWD")
+STATUS_DIR=".claude/claude-status"
 mkdir -p "$STATUS_DIR"
 
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -26,6 +26,6 @@ jq -n \
   --arg dirname "$DIRNAME" \
   --arg timestamp "$TIMESTAMP" \
   '{status: $status, session_id: $session_id, cwd: $cwd, dirname: $dirname, timestamp: $timestamp}' \
-  > "$TMPFILE"
+  >"$TMPFILE"
 
 mv "$TMPFILE" "$STATUS_DIR/${DIRNAME}.json"
