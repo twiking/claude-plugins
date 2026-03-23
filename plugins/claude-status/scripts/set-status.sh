@@ -8,7 +8,7 @@ INPUT=$(cat)
 CWD=$(echo "$INPUT" | jq -r '.cwd // empty')
 SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // empty')
 
-if [ -z "$CWD" ]; then
+if [ -z "$CWD" ] || [ ! -d "$CWD" ]; then
   exit 0
 fi
 
