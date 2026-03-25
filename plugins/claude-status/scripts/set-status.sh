@@ -13,7 +13,8 @@ if [ -z "$CWD" ] || [ ! -d "$CWD" ]; then
 fi
 
 DIRNAME="data.json" #$(basename "$CWD")
-STATUS_DIR=".claude/claude-status"
+GIT_ROOT=$(git -C "$CWD" rev-parse --show-toplevel 2>/dev/null || echo "$CWD")
+STATUS_DIR="$GIT_ROOT/.claude/claude-status"
 mkdir -p "$STATUS_DIR"
 
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
