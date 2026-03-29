@@ -15,6 +15,9 @@ fi
 DIRNAME="data.json" #$(basename "$CWD")
 GIT_ROOT=$(git -C "$CWD" rev-parse --show-toplevel 2>/dev/null || echo "$CWD")
 STATUS_DIR="$GIT_ROOT/.claude/claude-status"
+
+echo "DEBUG: CWD=$CWD GIT_ROOT=$GIT_ROOT STATUS_DIR=$STATUS_DIR PWD=$(pwd)" >> /tmp/claude-status-debug.log
+
 mkdir -p "$STATUS_DIR"
 
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
