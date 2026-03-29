@@ -1,7 +1,7 @@
 {
   "name": "claude-status",
-  "version": "0.1.0",
-  "description": "Tracks whether Claude is working in a session and writes status to ~/.claude-status/<dirname>.json",
+  "version": "0.2.0",
+  "description": "Tracks whether Claude is working in a session and writes status to <git-root>/.claude/claude-status/data.json",
   "author": {
     "name": "twiking"
   }
