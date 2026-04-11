@@ -13,6 +13,11 @@
       "name": "waybar",
       "source": "./plugins/waybar",
       "description": "Skill for configuring, styling, and debugging Waybar (Wayland status bar)"
+    },
+    {
+      "name": "omarchy-themes",
+      "source": "./plugins/omarchy-themes",
+      "description": "Skill for creating, customizing, and publishing Omarchy themes"
     }
   ]
 }
