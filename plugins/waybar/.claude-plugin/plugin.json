@@ -1,0 +1,8 @@
+{
+  "name": "waybar",
+  "version": "0.1.0",
+  "description": "Skill for configuring, styling, and debugging Waybar (Wayland status bar)",
+  "author": {
+    "name": "twiking"
+  }
+}

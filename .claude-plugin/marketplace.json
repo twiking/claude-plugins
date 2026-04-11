@@ -8,6 +8,11 @@
       "name": "claude-status",
       "source": "./plugins/claude-status",
       "description": "Tracks whether Claude is working in a session and writes status to ~/.claude-status/<dirname>.json"
+    },
+    {
+      "name": "waybar",
+      "source": "./plugins/waybar",
+      "description": "Skill for configuring, styling, and debugging Waybar (Wayland status bar)"
     }
   ]
 }
